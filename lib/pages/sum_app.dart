@@ -10,7 +10,7 @@ class _SumAppState extends State<SumApp> {
   final TextEditingController _firstTextController = TextEditingController();
   final TextEditingController _secondTextController = TextEditingController();
   final GlobalKey<FormState> _formKey = GlobalKey<FormState>();
-  double _resutl = 0;
+  double _result = 0;
 
 
 
@@ -201,7 +201,7 @@ class _SumAppState extends State<SumApp> {
 
   Text buildText() {
     return Text(
-      "Result: ${_resutl.toStringAsFixed(2)}",
+      "Result: ${_result.toStringAsFixed(2)}",
       style: TextStyle(fontSize: 25),
     );
   }
@@ -210,7 +210,7 @@ class _SumAppState extends State<SumApp> {
     if(_formKey.currentState!.validate()){
       double firstNumber = double.tryParse(_firstTextController.text) ?? 0;
       double secondNumber = double.tryParse(_secondTextController.text) ?? 0;
-      _resutl = firstNumber + secondNumber;
+      _result = firstNumber + secondNumber;
       setState(() {});
     }
 
@@ -220,7 +220,7 @@ class _SumAppState extends State<SumApp> {
     if(_formKey.currentState!.validate()){
       double firstNumber = double.tryParse(_firstTextController.text) ?? 0;
       double secondNumber = double.tryParse(_secondTextController.text) ?? 0;
-      _resutl = firstNumber - secondNumber;
+      _result = firstNumber - secondNumber;
       setState(() {});
     }
 
@@ -230,7 +230,7 @@ class _SumAppState extends State<SumApp> {
     if(_formKey.currentState!.validate()){
       double firstNumber = double.tryParse(_firstTextController.text) ?? 0;
       double secondNumber = double.tryParse(_secondTextController.text) ?? 0;
-      _resutl = firstNumber * secondNumber;
+      _result = firstNumber * secondNumber;
       setState(() {});
     }
 
@@ -241,7 +241,7 @@ class _SumAppState extends State<SumApp> {
     if(_formKey.currentState!.validate()){
       double firstNumber = double.tryParse(_firstTextController.text) ?? 0;
       double secondNumber = double.tryParse(_secondTextController.text) ?? 0;
-      _resutl = firstNumber / secondNumber;
+      _result = firstNumber / secondNumber;
       setState(() {});
     }
 
